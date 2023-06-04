@@ -1,0 +1,11 @@
+mixin review(review)
+    div
+        h4
+        a(href=`/review/${review.id}`)=review.title
+        li #{review.content}
+        li #{review.rating}/5.
+        li #{review.hashtags}
+        small 
+            li Posted #{review.createdAt}.
+        hr
+        

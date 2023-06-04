@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    background-color: #f8f9fa;
+    padding: 0 2%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    flex-wrap: nowrap;
+}
+
+#logo {
+    height: 100%; 
+    max-width: min(15vw, 130px); /* use smaller value between 15vw and 100px */
+    flex: 1;
+}
+
+#logo img {
+    height: 100%; /* adjust logo image height to be responsive */
+    width: 100%; /* adjust logo image width to be responsive */
+    object-fit: contain; /* ensure the logo maintains its aspect ratio */
+}
+
+#menu {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 1%;
+    flex: 2;
+}
+
+#menu button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap; /* prevent button text from wrapping */
+}
+
+#login, #estimate {
+    display: flex;
+    flex: 1;
+    align-items: center;    
+    justify-content: flex-end; 
+}
+
+#login button, #estimate button {
+    padding: 0.5rem 1rem;
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-left: 1%;
+    white-space: nowrap; /* prevent button text from wrapping */
+}
+
+@media screen and (max-width: 600px) {
+    #navbar {
+        height: max(15vh, 80px); /* increase navbar height for smaller screens */
+    }
+    #logo {
+        max-width: min(20vw, 120px); /* adjust logo width for smaller screens */
+    }
+    #menu button, #login button, #estimate button {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #navbar {
+        height: max(20vh, 100px); /* increase navbar height for even smaller screens */
+    }
+    #logo {
+        max-width: min(25vw, 140px); /* adjust logo width for even smaller screens */
+    }
+    #menu button, #login button, #estimate button {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+
+#banner {
+    padding-top: 3%;
+    width: 80%;
+    height: 30vh;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#bannerVideo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto; /* Centers the row horizontally */
+    padding: 2rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+
+.item img {
+    width: 100%;
+    height: 50%; /* Adjust as per requirement */
+    object-fit: cover; /* ensure image fills container without distorting aspect ratio */
+}
+
+.item h5, .item p {
+    margin: 0;
+    white-space: normal;
+}
+.item h5{
+    margin:0;
+    padding-top:0.5rem;
+    font-size: 0.8em;
+}
+
+.item p {
+    margin: 0;
+    max-width: 90%; 
+    padding-bottom: 0.3rem;
+    font-size: 0.2em;
+}
+
+@media screen and (max-width: 1000px) {
+    #navbar {
+        height: 5vh; 
+    }
+    #logo {
+        max-width: min(13vw, 100px); 
+    }
+    #menu button, #login button, #estimate button {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+    .item h5 {
+        font-size: 0.6em;
+    }
+    .item p {
+        font-size: 0.2em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #navbar {
+        height: 3vh; 
+    }
+    #logo {
+        max-width: min(10vw, 80px); 
+    }
+    #menu button, #login button, #estimate button {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.4rem;
+    }
+    .item h5 {
+        font-size: 0.3em;
+    }
+    .item p {
+        font-size: 0.15em;
+    }
+}
+
+@media (max-width: 600px) {
+    #navbar {
+        height: 4vh; 
+    }
+    #logo {
+        max-width: min(11vw, 100px); 
+    }
+    .item img {
+        height: 60%; /* increase height on small screens */
+    }
+
+    .item h5, .item p {
+        font-size: 0.5em; /* reduce font size on small screens */
+    }
+}
+
+#portfolio {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    border-top: 1px solid #ccc; /* Add a grey line above the section */
+}
+
+#portfolio h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+#portfolio h2 img {
+    height: 1em;
+    width: auto;
+}
+
+#portfolio-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-items: start;
+    width: 100%;
+    height: 30vh;
+}
+
+#portfolio-images div {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#portfolio-images img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+#portfolio-images p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+}
+

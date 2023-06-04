@@ -1,0 +1,11 @@
+extends base
+
+
+block content 
+    form(method = "POST")
+        input(placehorder="title", required, type="text", name="title", maxLength = 30, minLength=4)
+        hr
+        input(placehorder="content", required, type="text", name="content")
+        input(placehorder="hashtags", required, type="text", name="hashtags")
+        input(placehorder="rating", required, type="text", name="rating")
+        input(type="submit", value="리뷰 작성하기")

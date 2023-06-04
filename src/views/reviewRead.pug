@@ -1,0 +1,12 @@
+extends base.pug
+
+block content
+    h3 #{review.title} #{review.title === 1 ? "view" : "title"}
+    h3 #{review.content}
+    h3 #{review.hashtags}
+    h3 #{review.rating}
+    small #{review.createdAt}
+    hr
+    a(href=`${review.id}/edit`) Edit review &rarr;
+    hr
+    a(href=`${review.id}/delete`) Delete review &rarr;

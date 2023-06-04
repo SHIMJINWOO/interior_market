@@ -1,0 +1,12 @@
+extends base.pug
+
+block content
+    h1 리뷰 수정
+    h4 Change Title of review
+    
+    form(method="POST")
+        input(placehorder="title", required, type="text", name="title", maxLength = 30, minLength=4, value=review.title)
+        input(placehorder="content", required, type="text", name="content",value=review.content)
+        input(placehorder="hashtags", required, type="text", name="hashtags", value=review.hashtags)
+        input(placehorder="rating", required, type="text", name="rating", value=review.rating)
+        input(value="Save",type="submit")

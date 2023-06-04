@@ -1,0 +1,11 @@
+extends base
+include mixins/review
+
+block content
+    h2 Welcome here you will see the reviews
+    button 
+        a(href="/review/create") 후기쓰러 가기(1,000P)
+    each review in reviews 
+        +review(review)
+    else 
+        li sorry no review. 

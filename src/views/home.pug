@@ -1,0 +1,39 @@
+extends base
+include mixins/product
+
+block content
+    div#banner
+        video#bannerVideo(autoplay muted loop)
+            source(src="./img/banner/papering.mp4" type="video/mp4")
+            | Your browser does not support HTML5 video.
+        img(src="image1.jpg", alt="Image 1", style="display: block;")
+        img(src="image2.jpg", alt="Image 2")
+
+    section#items
+        div.item
+            img(src="./img/items/papering.jpg", alt="도배사진")
+            h5 도배
+            p 더러워진 벽지를 새걸로
+            p 50,000원 / 평
+
+    // Add the rest of the items here    
+    section#portfolio
+        h2
+            img(src="./img/logo/logo_orange.png")
+            | 시공 포트폴리오
+        div#portfolio-images
+            div
+                img(src="portfolio1.jpg", alt="Portfolio Piece 1")
+                p 서울 송파구 리버빌레이크 22평형
+            div
+                img(src="portfolio2.jpg", alt="Portfolio Piece 2")
+                p 부산 북구 삼한아파트 34평형
+            div
+                img(src="portfolio3.jpg", alt="Portfolio Piece 3")
+                p 서울 합정 문문카페
+            div
+                img(src="portfolio4.jpg", alt="Portfolio Piece 4")
+                p 서울 강남 논현동 마일스디오빌 11평형
+            div
+                img(src="portfolio5.jpg", alt="Portfolio Piece 5")
+                p 서울 도곡동 에이아파트 45평형

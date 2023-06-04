@@ -1,0 +1,8 @@
+mixin product(product)
+    a(href=`/products/${product.id}`).product-mixin
+        div.product-mixin__thumb
+        div.product-mixin__data
+            span.product-mixin__title=product.title
+            div.product-mixin__meta
+                span #{product.owner.name} • 
+                span #{product.meta.views} 회

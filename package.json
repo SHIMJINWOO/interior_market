@@ -1,0 +1,54 @@
+{
+  "name": "interiormarket",
+  "version": "1.0.0",
+  "description": "interior market",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "build:scss": "node-sass src/client/scss/styles.scss -o src/client/ --output-style compressed",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/init.js",
+    "dev": "nodemon --exec babel-node src/init.js"
+  },
+  "author": "SIM",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.2.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.2.4",
+    "node-fetch": "^2.6.11",
+    "nodemon": "^2.0.22",
+    "passport": "^0.6.0",
+    "passport-naver": "^1.0.6",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "mini-css-extract-plugin": "^2.7.2",
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.19",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SHIMJINWOO/interior_market.git"
+  },
+  "keywords": [
+    "interior_market"
+  ],
+  "bugs": {
+    "url": "https://github.com/SHIMJINWOO/interior_market/issues"
+  },
+  "homepage": "https://github.com/SHIMJINWOO/interior_market"
+}
