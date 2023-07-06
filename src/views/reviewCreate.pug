@@ -2,10 +2,12 @@ extends base
 
 
 block content 
-    form(method = "POST")
-        input(placehorder="title", required, type="text", name="title", maxLength = 30, minLength=4)
+    form(method = "POST" enctype="multipart/form-data")
+        input(placeholder="title",  type="text", name="title", maxLength = 30, minLength=2, required)
+        input(placeholder="content", required, type="text", name="content")
+        input(placeholder="hashtags", required, type="text", name="hashtags")
+        input(placeholder="rating", required, type="text", name="rating")
         hr
-        input(placehorder="content", required, type="text", name="content")
-        input(placehorder="hashtags", required, type="text", name="hashtags")
-        input(placehorder="rating", required, type="text", name="rating")
+        label(for="reviewPic") 사진 첨부
+        input(type="file", id="reviewPic" name="reviewPic", accept="*/image", multiple)
         input(type="submit", value="리뷰 작성하기")

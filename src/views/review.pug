@@ -2,10 +2,12 @@ extends base
 include mixins/review
 
 block content
-    h2 Welcome here you will see the reviews
-    button 
-        a(href="/review/create") 후기쓰러 가기(1,000P)
-    each review in reviews 
-        +review(review)
-    else 
-        li sorry no review. 
+    div.reviewMain
+        div.reviewTitle
+            h2 인테리어 마켓의 시공 리뷰를 구경해 보세요!
+        div.reviewWrite
+            button 
+                a(href="/review/create") 후기쓰러 가기(1,000P)
+        div.reivews
+            each review in reviews 
+                +review(review)

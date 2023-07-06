@@ -1,13 +1,12 @@
 extends ../base
-include ../mixins/video
-
+include ../mixins/review
 
 block content
-    div.profile__data
-        img(src="/" + user.avatarUrl).avatar
-        h3=user.name
-    div.video-grid
-        each video in user.videos
-            +video(video)
-        else
-            span.empty__message No videos found
+    div 
+        h3 #{loggedInUser.name}님의 Profile
+    hr
+    div 
+        h4 #{loggedInUser.email}
+        h4 #{loggedInUser.phoneNumber}
+    each review in user.reviews 
+        +review(review)

@@ -9,7 +9,7 @@ export const login = (req, res) => {
   };
 
 export const join = (req, res) => {
-    res.render('join', { pageTitle: 'Join', siteName: 'Welcome to Daily Echo Check New Member'});
+    return res.render('join', { pageTitle: 'Join', siteName: 'Welcome to Daily Echo Check New Member'});
   };
   
   

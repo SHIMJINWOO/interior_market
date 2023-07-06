@@ -1,6 +1,69 @@
 header {
-  padding: 20px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
+  background: black;
+  color: #fff;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  img {
+    width: 8vw;
+    height: 30px;
+  }
+
+  #menu {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* This will align items vertically center */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    button {
+      color: #fff; /* This will make button text color white */
+      background: none;
+      border: none;
+      padding: 10px;
+      height: 30px;  /* Add this */
+      font-size: 0.9rem;
+      line-height: normal; /* Change this */
+      transition: all 0.5s; 
+      cursor: pointer;
+       &:hover {
+        color: rgb(213, 213, 91); // Change text color to black
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit; /* This will inherit the color from the parent button */
+      }
+    }
+  }
+
+  #login {
+    position: absolute;
+    right: 10px;
+
+    button {
+      color: #fff; /* This will make button text color white */
+      background: none;
+      border: none;
+      padding: 10px;
+      height: 30px;  /* Add this */
+      font-size: 0.9rem;
+      line-height: normal; /* Change this */
+      transition: all 0.5s; 
+      cursor: pointer;
+           &:hover {
+        color: rgb(213, 213, 91);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit; /* This will inherit the color from the parent button */
+      }
+    }
+  }
 }

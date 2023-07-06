@@ -6,7 +6,13 @@ block content
     h3 #{review.hashtags}
     h3 #{review.rating}
     small #{review.createdAt}
+    h5 작성자 #{review.owner.name}
     hr
-    a(href=`${review.id}/edit`) Edit review &rarr;
-    hr
-    a(href=`${review.id}/delete`) Delete review &rarr;
+    each picUrl in review.reviewPicUrl
+        //img(src=picUrl, alt=review.title)
+        img(src="/"+picurl, width="100", height="100")
+    if String(review.owner._id) === String(loggedInUser._id)
+        div 
+            a(href=`${review.id}/edit`) Edit review &rarr;
+            br
+            a(href=`${review.id}/delete`) Delete review &rarr;

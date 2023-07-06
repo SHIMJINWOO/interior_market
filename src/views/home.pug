@@ -2,38 +2,120 @@ extends base
 include mixins/product
 
 block content
-    div#banner
-        video#bannerVideo(autoplay muted loop)
-            source(src="./img/banner/papering.mp4" type="video/mp4")
-            | Your browser does not support HTML5 video.
-        img(src="image1.jpg", alt="Image 1", style="display: block;")
-        img(src="image2.jpg", alt="Image 2")
+    div#banner.carousel(data-ride='carousel' data-interval='5000')
+        div.carousel-inner
+            div.carousel-item.active(data-interval='5000')
+                img(src="/img/banner/001.png", alt="Image 1")
+                div.carousel-caption
+                    h5 정찰제 인테리어의 시작
+                    p 나에게 꼭 필요한 시공만 골라 담아보세요
+            div.carousel-item(data-interval='5000')
+                img(src="/img/banner/002.png", alt="Image 2")
+                div.carousel-caption
+                    h5 상담부터 시공 관리까지
+                    p 견적 상담부터 사후관리까지 모두 걱정마세요
+            //Add the remaining banners here as needed
+        a.carousel-control-prev(href="#banner" role="button" data-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden="true")
+            span.sr-only Previous
+        a.carousel-control-next(href="#banner" role="button" data-slide="next")
+            span.carousel-control-next-icon(aria-hidden="true")
+            span.sr-only Next
 
+    h5.heading-center 시공상품
     section#items
         div.item
-            img(src="./img/items/papering.jpg", alt="도배사진")
-            h5 도배
-            p 더러워진 벽지를 새걸로
-            p 50,000원 / 평
+            div.img-box
+                img(src="/img/items/bath.jpg", alt="bath")
+            div.description
+                h5 화장실 타일
+                p 더러워진 타일만 부분시공으로
+                p 50,000원 / 평
+        div.item
+            div.img-box
+                img(src="/img/items/door.jpg", alt="door")
+            div.description
+                h5 문
+                p 문만 교체하고 싶다면
+                p 50,000원 / 평
+        div.item
+            div.img-box
+                img(src="/img/items/elastic.jpg", alt="elastic")
+            div.description
+                h5 탄성
+                p 탄성 시공도 부분시공으로 
+                p 50,000원 / 평           
+        div.item
+            div.img-box
+                img(src="/img/items/film.jpg", alt="film")
+            div.description
+                h5 필름
+                p 탄성 시공도 부분시공으로 
+                p 50,000원 / 평           
+        div.item
+            div.img-box
+                img(src="/img/items/floor.jpg", alt="floor")
+            div.description
+                h5 장판
+                p 장판 시공도 부분시공으로 
+                p 50,000원 / 평           
+        div.item
+            div.img-box
+                img(src="/img/items/maru.jpg", alt="maru")
+            div.description
+                h5 마루
+                p 마루 시공도 부분시공으로 
+                p 50,000원 / 평      
+        div.item
+            div.img-box
+                img(src="/img/items/middledoor.jpg", alt="middledoor")
+            div.description
+                h5 중문
+                p 중문 시공도 부분시공으로 
+                p 50,000원 / 평      
+        div.item
+            div.img-box
+                img(src="/img/items/papering.jpg", alt="papering")
+            div.description
+                h5 도배
+                p 도배 시공도 부분시공으로 
+                p 50,000원 / 평    
+        div.item
+            div.img-box
+                img(src="/img/items/sink.jpg", alt="sink")
+            div.description
+                h5 싱크
+                p 싱크 시공도 부분시공으로 
+                p 50,000원 / 평  
+        div.item
+            div.img-box
+                img(src="/img/items/tile.jpg", alt="tile")
+            div.description
+                h5 타일
+                p 타일 시공도 부분시공으로 
+                p 50,000원 / 평  
+        div.item
+            div.img-box
+                img(src="/img/items/window.jpg", alt="window")
+            div.description
+                h5 창문
+                p 창문 시공도 부분시공으로 
+                p 50,000원 / 평  
 
-    // Add the rest of the items here    
     section#portfolio
-        h2
-            img(src="./img/logo/logo_orange.png")
-            | 시공 포트폴리오
+        h5.heading-center 시공 포트폴리오
         div#portfolio-images
-            div
-                img(src="portfolio1.jpg", alt="Portfolio Piece 1")
-                p 서울 송파구 리버빌레이크 22평형
-            div
-                img(src="portfolio2.jpg", alt="Portfolio Piece 2")
-                p 부산 북구 삼한아파트 34평형
-            div
-                img(src="portfolio3.jpg", alt="Portfolio Piece 3")
-                p 서울 합정 문문카페
-            div
-                img(src="portfolio4.jpg", alt="Portfolio Piece 4")
-                p 서울 강남 논현동 마일스디오빌 11평형
-            div
-                img(src="portfolio5.jpg", alt="Portfolio Piece 5")
-                p 서울 도곡동 에이아파트 45평형
+
+block scripts
+    script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+
+    script.
+        $(document).ready(function() {
+            $('#banner').carousel({
+                interval: 5000
+            });
+        });
+    
+    script(src="/static/js/main.js")

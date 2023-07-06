@@ -2,13 +2,12 @@
 import express from "express";
 import { loginUser,joinUser, service, introduce} from '../controllers/userControllers.js'; 
 import { home, join, login } from '../controllers/rootControllers.js'; 
+import {protectorMiddleware, publicOnlyMiddleware} from '../middlewares.js';
 const rootRouter = express.Router();
 
 rootRouter.get('/', home); //메인 페이지
-rootRouter.get('/login',login); //로그인
-rootRouter.post('/login', loginUser);
-rootRouter.get('/join', join); //회원가입
-rootRouter.post('/join', joinUser); 
+rootRouter.route('/login').all(publicOnlyMiddleware).get(login).post(loginUser); //로그인
+rootRouter.route('/join').all(publicOnlyMiddleware).get(join).post(joinUser); //회원가입
 rootRouter.get('/service', service); //서비스소개
 rootRouter.get('/introduce', introduce); //시공상품
 

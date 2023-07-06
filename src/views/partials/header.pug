@@ -1,23 +1,35 @@
 header
     a(href="/")
-        img(src="../../interio_market_proto/img/logo/logo_orange.png")
-    nav
-        div#menu
-            button 서비스 소개
-            button 시공 상품
+        img(src="/img/logo/logo_black.png", alt="logo")
+    div#menu
+        button
+            a(href="#") 서비스 소개
+        button 
+            a(href="#") 시공 상품
+        button 
+            a(href="#") 후기 
+            ///review
+        button 
+            a(href="#") 자재
+        button 
+            a(href="#") 포트폴리오 
+            ///portfolio
+    if loggedIn 
+        div#login
+            
             button 
-                a(href="/review") 후기
-            button 자재
+                a(href="/users/edit-profile") Profile 수정하기
             button 
-                a(href="/portfolio") 포트폴리오 
-        hr
-        //div#login
-            //loggedin
-            //button
-                //a(href="/login") 로그인
-            //button
-            //    a(href="/join") Join
-            //button 장바구니
-            //loggedout
-            //button 로그아웃 
-            //button 장바구니
+                a(href=`/users/${loggedInUser._id}`) #{loggedInUser.name}의 Profile
+            button
+                a(href="/users/logout") 로그아웃
+            button 
+                a(href="#") 장바구니
+    else
+        div#login
+            button
+                a(href="/login") 로그인
+            button
+                a(href="/join") Join
+            button
+                a(href="#") 장바구니

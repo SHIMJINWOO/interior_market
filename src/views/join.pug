@@ -1,15 +1,22 @@
 extends base
 
 block content
-  h1 Join
-  if errorMessage
-    span=errorMessage
-  form(method="POST", action="/join")
-    input(placeholder="Email", name="email", type="email", required)
-    input(placeholder="Password", name="password", type="password", required)
-    input(placeholder="Name", name="name", type="text", required)
-    input(placeholder="Phone Number", name="phoneNumber", type="tel", pattern="[0-9]{11}", required)
-    input(type="submit", value="Join")
-  div.auth-switch
-    span Already have an account? 
-    a(href="/login") Log in now &rarr;
+    .join-page
+        .join-card
+            h5 Join
+            if errorMessage
+                span=errorMessage
+            form(method="POST", action="/join")
+                input(placeholder="이메일", name="email", type="email", required)
+                input(placeholder="비밀번호", name="password", type="password", required)
+                input(placeholder="비밀번호 확인", name="password2", type="password", required)
+                input(placeholder="이름", name="name", type="text", required)
+                input(placeholder="휴대전화 번호", name="phoneNumber", type="tel", pattern="[0-9]{11}", required)
+                input(type="submit", value="회원가입")
+            hr
+            p or
+            a(href="/users/naver")
+                img(height='50' src="http://static.nid.naver.com/oauth/small_g_in.PNG", alt="Login with Naver")
+            .auth-switch
+                span 이미 회원이신가요?&nbsp 
+                a(href="/login") 로그인 &rarr;

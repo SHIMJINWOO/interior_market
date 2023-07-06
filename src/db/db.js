@@ -1,7 +1,7 @@
 // src/db/database.js
 import mongoose from "mongoose";
 
-const connection = mongoose.connect("mongodb://127.0.0.1:27017/interior_market",{
+const connection = mongoose.connect(process.env.DB_URL,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

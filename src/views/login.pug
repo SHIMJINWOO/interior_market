@@ -1,16 +1,23 @@
 extends base
 
 block content
-  if errorMessage
-    span=errorMessage
-  form(method="POST", action="/login")
-    input(placeholder="Email", name="Email", type="text", required)
-    input(placeholder="Password", name="password", type="password", required)
-    input(type="submit", value="Login")
-  // Naver Login
-  a(href="/auth/naver")
-    img(src="http://static.nid.naver.com/oauth/small_g_in.PNG", alt="Login with Naver")
-  // include partials/social-login
-  div.auth-switch
-    span Don't have an account? 
-    a(href="/join") Create one now &rarr;
+    .login-page
+        .login-card
+            if errorMessage
+                span=errorMessage
+            h5 Sign in
+            form(method="POST", action="/login")
+                input(placeholder="이메일", name="email", type="text", required)
+                br
+                input(placeholder="비밀번호", name="password", type="password", required)
+                br
+                input(type="submit", value="Sign in")
+            hr
+            p or
+            a(href="/users/naver")
+                img(height='50' src="http://static.nid.naver.com/oauth/small_g_in.PNG", alt="Login with Naver")
+            // include partials/social-login
+            div.auth-switch
+                span 신규회원 이라면&nbsp
+                a(href="/join") 회원가입 &rarr;
+
