@@ -1,0 +1,6 @@
+/node_modules
+.env
+/uploads
+/assets
+/intero_market_proto
+/build

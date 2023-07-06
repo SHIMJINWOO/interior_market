@@ -1,0 +1,106 @@
+// banner.scss
+
+#banner.carousel .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background-color: black;
+  
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .carousel-caption {
+      position: absolute;
+      left: 20%; /* Position it 25% from the left */
+      top: 66%;  /* Position it in the middle of the banner's height */
+      transform: translateY(-50%); /* This ensures the center point is middle of the text, not top edge */
+      color: white; /* adjust the color as per your need */
+  
+      h5, p {
+          margin-left: 0; /* reset left margin */
+          padding-left: 0; /* reset left padding */
+          text-align: left; /* left align the text */
+      }
+  }
+  
+  }
+  
+  .slider_section {
+    position: relative;
+    background-color: #333;
+  
+    .carousel-inner {
+      .carousel-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+  
+        .container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+  
+          .detail-box {
+            margin-top: 20px;
+  
+            h1 {
+              font-size: 2.5em;
+            }
+  
+            p {
+              font-size: 1.5em;
+            }
+  
+            .btn-box {
+              margin-top: 20px;
+  
+              .btn1 {
+                background: none;
+                border: 1px solid #fff;
+                color: #fff;
+                padding: 10px 20px;
+                text-decoration: none;
+                transition: all 0.5s;
+  
+                &:hover {
+                  background: #fff;
+                  color: #000;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .carousel-indicators {
+      position: absolute;
+      bottom: 10px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+  
+      li {
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        margin: 0 5px;
+        border-radius: 50%;
+        cursor: pointer;
+  
+        &.active {
+          background: #000;
+        }
+      }
+    }
+  }
+  

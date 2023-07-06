@@ -1,0 +1,11 @@
+mixin user(user)
+    div
+        h4
+        a(href=`/user/${user.id}`)=user.name
+        li #{user.name}
+        li #{user.email}
+        li #{user.phoneNumber}
+        small 
+            li Posted #{review.createdAt}.
+        hr
+        

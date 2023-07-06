@@ -1,0 +1,23 @@
+
+  
+#portfolio {
+    h2 {
+        color: $red;
+    }
+    
+    #portfolio-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        div {
+            width: 20%; // Adjust this based on your design
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

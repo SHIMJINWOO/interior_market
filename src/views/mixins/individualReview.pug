@@ -1,0 +1,15 @@
+mixin individualReview(review)
+    div
+        h4
+        a(href=`/review/${review.id}`)=review.title
+        li #{review.content}
+        li #{review.rating}/5.
+        li #{review.hashtags}
+        small 
+            li Posted #{new Date(review.createdAt).toISOString().split('T')[0]}.
+        hr
+        .review-image
+            if review.images && review.images.length > 0
+                img(src=review.images[0].url, alt="Review Image")
+                if review.images.length > 1
+                    div.image-overlay +

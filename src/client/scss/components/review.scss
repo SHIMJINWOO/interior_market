@@ -1,0 +1,108 @@
+.reviewMain {
+    padding-top:8vw;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+
+    .reviewTitle,
+    .reviewWrite {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .reviewTitle {
+        width: 60%;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        h2 {
+            font-size: 2em; 
+            color: black;
+        }
+    }
+
+    .reviewWrite {
+        width: 40%;
+        text-align: right;
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            &:hover {
+                background-color: #333;
+            }
+        }
+    }
+
+    .reviews {
+        margin-top: 20px;
+
+        div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+            .review-content {
+                width: 70%;
+
+                h4 a {
+                    font-size: 1.5em;
+                    color: black;
+                }
+
+                li {
+                    color: black;
+                    margin: 5px 0;
+
+                    &:nth-child(2) {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 50ch;
+                    }
+                }
+
+                small {
+                    color: grey;
+                }
+
+                hr {
+                    border: 0.5px solid #ccc;
+                    margin: 20px 0;
+                }
+            }
+
+            .review-image {
+                width: 30%;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    max-height: 300px;
+                    object-fit: cover;
+                }
+
+                .image-overlay {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

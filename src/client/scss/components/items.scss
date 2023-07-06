@@ -1,0 +1,75 @@
+h5.heading-center {
+  text-align: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  color: black;
+}
+
+#items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Display 4 items in each row */
+    gap: 1rem;
+    justify-content: center;
+    width: 80%; /* Adjust the width as per your requirement */
+    margin: 0 auto; /* Centers the row horizontally */
+    padding: 2rem;
+    background-color: white;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      height: 300px; /* Adjust this as needed */
+      background-color: #f1f2f3;
+      border-radius: 15px;
+      height: 50vh;
+      overflow: hidden; /* Ensures content doesn't overflow the border radius */
+
+      .img-box {
+        height: 50%; /* Take up half the space of the .item */
+        display: flex;
+        align-items: center; /* Vertically center the image */
+        justify-content: center; /* Horizontally center the image */
+        background-color: f1f2f3;
+        
+        img {
+          max-height: 100%; /* Adjust as per requirement */
+          object-fit: contain; /* ensure image fills container without distorting aspect ratio */
+        }
+      }
+
+      .description {
+        height: 50%; /* Take up half the space of the .item */
+        background: linear-gradient(to bottom, #f1f2f3 , #222831 1px);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center the text vertically */
+        padding: 0 0 0 1rem;
+        
+        h5, p {
+          margin: 0;
+          color: white; /* Change the text color to white as it's on black background */
+        }
+        
+        h5 {
+          font-size: 1.25rem;
+        }
+        
+        p {
+          max-width: 90%;
+          padding-bottom: 0.3rem;
+          font-size: 1em;
+          font-weight: 400;
+          line-height: 1;
+          display: block;
+          margin-block-start: 1em;
+          margin-block-end: 1em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+      
+        }
+      }
+    }
+
+    /* Add your media queries for responsive design as needed */
+}
